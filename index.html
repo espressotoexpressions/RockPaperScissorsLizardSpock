@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Lizard Spock Game- Let's Play!</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+   
+    
+    
+
+    <!-- start options container-->
+    <div class="container border border-white form-check d-flex align-items-center vh-100" id="optionsContainer">
+        <div class="col ">
+            <h1 class="text-center mb-5 ">HOW DO YOU WANT TO PLAY THIS GAME?</h1>
+            <div class="row mb-4">
+              <h2 class="teal">NUMBER OF PLAYERS</h3>
+              <div class="form-check col">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="playerCountRadioBtn"
+                  id="onePlayerRadioBtn"
+                  checked
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  <h3>1 Player VS Computer</h3>
+                </label>
+              </div>
+              <div class="form-check col">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="playerCountRadioBtn"
+                  id="twoPlayerRadioBtn"
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  <h3>2 Player</h3>
+                </label>
+              </div>
+            </div>
+      
+            
+            <div class="row mb-4">
+                <h2 class="teal  ">MODES</h2>
+              <div class="form-check col">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="ModeSelect"
+                  id="mode1RadioBtn"
+                  checked
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                <h3>1 Round </h3>
+                </label>
+              </div>
+              <div class="form-check col">
+                
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="ModeSelect"
+                  id="mode5RadioBtn"
+                />
+                <label class="m-0 form-check-label" for="flexRadioDefault2">
+                    <h3>
+                      Best of 5
+                    </h3>
+                    </label>
+              
+              </div>
+              <div class="form-check col">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="ModeSelect"
+                  id="mode7RadioBtn"
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  <h3>
+                    Best of 7
+                  </h3>
+                </label>
+              </div>
+            </div>
+      
+            <div class="row">
+              <button type="button" class="btn" id="startBtn">
+                <img src="./assets/start button.png" alt="Start Button" />
+              </button>
+            </div>
+        </div>
+      
+    </div>
+
+    <!--end options container-->
+
+    <!--start player 1 container-->
+    <div class="container border border-white inactive" id="onePlayerContainer">
+      <!--score section-->
+      <div class="row justify-content-between align-items-center text-center">
+        <div class="col">
+          <h3 id="p1ScoreTxt">YOU: 0</h3>
+        </div>
+        <div class="col">
+          <h3 id="roundNumTxt">ROUND 0 OF 0</h3>
+        </div>
+        <div class="col">
+          <h3 id="p2ScoreTxt">COMPUTER: 0</h3>
+        </div>
+      </div>
+      <!--end of score and rounds section-->
+
+      <!--start moves selected section-->
+      <div
+        class="row d-flex justify-content-between align-items-center text-center"
+        id="movesSelectedSection"
+      >
+        <div class="col">
+          <img
+            src="./assets/rock.png"
+            id="player1MoveImg"
+            alt="Player 1 Move selected"
+          />
+        </div>
+        <div class="col">
+          <img src="./assets/VSwhite.png" id="vsImg" alt="VS image" />
+        </div>
+        <div class="col">
+          <img
+            src="./assets/rock.png"
+            id="player2MoveImg"
+            alt="Player 1 Move selected"
+          />
+        </div>
+      </div>
+      <!--end of moves selected section-->
+      <!-- start Game Result Msg -->
+      <div class="row text-center" id="playerMsg">
+        <h1 class="" id="firstMoveTxt">
+          WHAT WILL BE YOUR FIRST MOVE?
+        </h1>
+        <h2  id="roundResultTxt">ROUND WINNER RESULT</h2>
+        <h1 id="gameResultTxt">OVERALL WINNER RESULT</h1>
+        <h2 id="nextMoveOrGameOverTxt">CHOOSE YOUR NEXT MOVE</h2>
+      </div>
+      <!--end game result msg -->
+      <div class="row justify-content-center" id="movesBtnSection">
+        <div class="d-flex flex-wrap justify-content-between">
+          <button type="button" class="btn" id="p1RockBtn">
+            <img src="./assets/rock.png" alt="Rock Button" />
+          </button>
+          <button type="button" class="btn" id="p1PaperBtn">
+            <img src="./assets/paper.png" alt="Paper Button" />
+          </button>
+          <button type="button" class="btn" id="p1ScissorsBtn">
+            <img src="./assets/scissors.png" alt="Scissors Button" />
+          </button>
+          <button type="button" class="btn" id="p1LizardBtn">
+            <img src="./assets/lizard.png" alt="Lizard Button" />
+          </button>
+          <button type="button" class="btn" id="p1SpockBtn">
+            <img src="./assets/spock.png" alt="Spock Button" />
+          </button>
+        </div>
+      </div>
+      <div class="align-items-center">  <button type="button" class="btn  inactive" id="playAgainBtn">
+        <img src="./assets/PlayAgain.png" alt="Play Again Button" />
+      </button></div>
+    </div>
+    <!--end player 1 container-->
+    <!--  result container-->
+    <div class="container" id="resultContainer">
+      <div class="row"></div>
+    </div>
+    <!--end game over container-->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/app.js"></script>
+
+  </body>
+</html>
