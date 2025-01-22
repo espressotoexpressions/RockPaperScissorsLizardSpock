@@ -1,6 +1,11 @@
 
-let optionsContainer = document.getElementById("optionsContainer");
+let splashContainer = document.getElementById("splashContainer");
+let letsPlayBtn=document.getElementById("letsPlayBtn");
+let rulesBtn = document.getElementById("rulesBtn");
+let rulesContainer = document.getElementById("rulesContainer");
+let letsPlayBtnFrmRules= document.getElementById("letsPlayBtnFrmRules");
 
+let optionsContainer = document.getElementById("optionsContainer");
 let onePlayerRadioBtn = document.getElementById("onePlayerRadioBtn");
 let twoPlayerRadioBtn = document.getElementById("twoPlayerRadioBtn");
 let mode1RadioBtn = document.getElementById("mode1RadioBtn");
@@ -574,8 +579,36 @@ function gameReset(){
         
 
 }
-//once Start button is clicked
 
+// letsPlayBtn event listener
+letsPlayBtn.addEventListener('click',function(){
+    optionsContainer.classList.remove("inactive");
+    optionsContainer.classList.add("active");
+
+    splashContainer.classList.remove("active");
+    splashContainer.classList.add("inactive");
+})
+
+//RulesBtn event listener
+rulesBtn.addEventListener('click',function(){
+    rulesContainer.classList.remove("inactive");
+    rulesContainer.classList.add("active");
+
+    splashContainer.classList.remove("active");
+    splashContainer.classList.add("inactive");
+
+})
+
+//letsPlayBtnFrmRules container event listener
+letsPlayBtnFrmRules.addEventListener('click',function(){
+ 
+    rulesContainer.classList.remove("active");
+    rulesContainer.classList.add("inactive");
+
+    optionsContainer.classList.remove("inactive");
+    optionsContainer.classList.add("active");
+})
+//once Start button is clicked
 //startBtn Event Listener
 startBtn.addEventListener('click',function(){
     

@@ -48,6 +48,20 @@ body {
     display:block ;
 }
 
+#rulesImg{
+    width:40rem;
+    height: auto; 
+    object-fit: contain;
+}
+
+#letsPlayBtn img{
+    width:20rem;
+}
+
+
+#rulesBtn img{
+    width:20rem;
+}
 #movesSelectedSection {
     flex-direction: column;
 }
