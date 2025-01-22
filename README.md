@@ -13,4 +13,4 @@ have a way to show the rules of the game
 
 prototype in figma: https://www.figma.com/design/rcTeWu3FPbM376Tgv8ntvG/Karen-Anne-Cadavos's-team-library?node-id=3543-2&t=UAMInhQkvNUTLnVa-1
 
-//Peer Reviewed by: 
+//Peer Reviewed by: Tanush Kumar - This Looks amazing I really like how you did the modes portion where i was able to change between the pvp and cpu and the modes all in one go. i couldn't find any issues with it good job!
