@@ -7,6 +7,15 @@
     --gray:  #CFCFCF;
 }
 
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2.5rem;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     color: white;
@@ -22,10 +31,13 @@ body {
 .green{
     color:var(--green);
 }
+.gray{
+    color: rgb(181, 181, 181);
+}
 
 .btn img{
 
-    width: 10em;
+    width: 14rem;
 }
 
 .inactive{
@@ -33,15 +45,35 @@ body {
 }
 
 .active{
-    display:block !important;
+    display:block ;
+}
+
+#movesSelectedSection {
+    flex-direction: column;
 }
 
 #movesSelectedSection img{
-    width:90%;
+    width:20rem;
     height: auto; 
     object-fit: contain;
+  
 }
 
 #vsImg {
-    width:50% !important;
+    width:11rem !important;
 }
+
+#playAgainBtn img{
+    width: 20rem;
+
+}
+#startBtn img{
+    width: 20rem;
+}
+
+.form-check-input {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: .75rem;
+
+  }

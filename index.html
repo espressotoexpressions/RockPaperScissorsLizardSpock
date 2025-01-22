@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/wickedcss.min.css">
   </head>
   <body>
    
@@ -18,171 +19,218 @@
     
 
     <!-- start options container-->
-    <div class="container border border-white form-check d-flex align-items-center vh-100" id="optionsContainer">
-        <div class="col ">
-            <h1 class="text-center mb-5 ">HOW DO YOU WANT TO PLAY THIS GAME?</h1>
-            <div class="row mb-4">
-              <h2 class="teal">NUMBER OF PLAYERS</h3>
-              <div class="form-check col">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="playerCountRadioBtn"
-                  id="onePlayerRadioBtn"
-                  checked
-                />
-                <label class="form-check-label" for="flexRadioDefault1">
-                  <h3>1 Player VS Computer</h3>
-                </label>
-              </div>
-              <div class="form-check col">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="playerCountRadioBtn"
-                  id="twoPlayerRadioBtn"
-                />
-                <label class="form-check-label" for="flexRadioDefault2">
-                  <h3>2 Player</h3>
-                </label>
-              </div>
-            </div>
+    <div class="container vh-100 d-flex flex-column justify-content-center align-items-center" id="optionsContainer">
       
-            
-            <div class="row mb-4">
-                <h2 class="teal  ">MODES</h2>
-              <div class="form-check col">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="ModeSelect"
-                  id="mode1RadioBtn"
-                  checked
-                />
-                <label class="form-check-label" for="flexRadioDefault1">
-                <h3>1 Round </h3>
-                </label>
-              </div>
-              <div class="form-check col">
-                
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="ModeSelect"
-                  id="mode5RadioBtn"
-                />
-                <label class="m-0 form-check-label" for="flexRadioDefault2">
-                    <h3>
-                      Best of 5
-                    </h3>
-                    </label>
+      <div class="row  ">
+        <div class="col  ">
+          <h1 class="my-5 text-center">HOW DO YOU WANT TO PLAY THIS GAME?</h1>
+          <div class="row my-5">
+            <h2 class="teal">NUMBER OF PLAYERS</h3>
+            <div class="form-check col">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="playerCountRadioBtn"
+                id="onePlayerRadioBtn"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                <h3>1 Player VS Computer</h3>
+              </label>
+            </div>
+            <div class="form-check col">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="playerCountRadioBtn"
+                id="twoPlayerRadioBtn"
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                <h3>2 Player</h3>
+              </label>
+            </div>
+          </div>
+    
+          
+          <div class="row my-5">
+              <h2 class="teal  ">MODES</h2>
+            <div class="form-check col">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="ModeSelect"
+                id="mode1RadioBtn"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+              <h3>1 Round </h3>
+              </label>
+            </div>
+            <div class="form-check col">
               
-              </div>
-              <div class="form-check col">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="ModeSelect"
-                  id="mode7RadioBtn"
-                />
-                <label class="form-check-label" for="flexRadioDefault2">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="ModeSelect"
+                id="mode5RadioBtn"
+              />
+              <label class="m-0 form-check-label" for="flexRadioDefault2">
                   <h3>
-                    Best of 7
+                    Best of 5
                   </h3>
-                </label>
-              </div>
+                  </label>
+            
             </div>
-      
-            <div class="row">
+            <div class="form-check col">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="ModeSelect"
+                id="mode7RadioBtn"
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                <h3>
+                  Best of 7
+                </h3>
+              </label>
+            </div>
+          </div>
+    
+          <div class="row my-5">
+            <div class="col text-center ">
               <button type="button" class="btn" id="startBtn">
                 <img src="./assets/start button.png" alt="Start Button" />
               </button>
             </div>
-        </div>
+          
+          </div>
+      </div>
+   
+      </div> 
       
     </div>
-
     <!--end options container-->
 
-    <!--start player 1 container-->
-    <div class="container border border-white inactive" id="onePlayerContainer">
-      <!--score section-->
-      <div class="row justify-content-between align-items-center text-center">
-        <div class="col">
-          <h3 id="p1ScoreTxt">YOU: 0</h3>
+    <!--start one player  container-->
+      <div class="container inactive vh-100 d-flex flex-column justify-content-center align-items-center" id="playerContainer">
+        <!--score section-->
+        <div class="row    w-100 text-center my-3 ">
+          <div class="col">
+            <h3 class ="teal " id="p1ScoreTxt">YOU: 0</h3>
+          </div>
+          <div class="col">
+            <h3 id="roundNumTxt">ROUND 0 OF 0</h3>
+          </div>
+          <div class="col ">
+            <h3 class ="green " id="p2ScoreTxt">CPU: 0</h3>
+          </div>
         </div>
-        <div class="col">
-          <h3 id="roundNumTxt">ROUND 0 OF 0</h3>
-        </div>
-        <div class="col">
-          <h3 id="p2ScoreTxt">COMPUTER: 0</h3>
-        </div>
-      </div>
-      <!--end of score and rounds section-->
+        <!--end of score and rounds section-->
+  
+        <!--start moves selected section-->
+     
+          <div class="row d-flex flex-row w-100 text-center mb-2 "
+          id="movesSelectedSection">
+          <div class="col ">
+            <img class="rounded-4 border border-5 border-white" 
+              src="./assets/rock.png"
+              id="player1MoveImg"
+              alt="Player 1 Move selected"
+          
+            />
+          </div>
+          <div class="col">
+            <img src="./assets/VSwhite.png"  id="vsImg" alt="VS image" />
+          </div>
+          <div class="col">
+            <img
+              src="./assets/rock.png"  class="rounded-4 border border-5 border-white"  id="player2MoveImg" alt="Player 1 Move selected"
+            />
+          </div>
+          </div>
+      
+        <!--end of moves selected section-->
 
-      <!--start moves selected section-->
-      <div
-        class="row d-flex justify-content-between align-items-center text-center"
-        id="movesSelectedSection"
-      >
-        <div class="col">
-          <img
-            src="./assets/rock.png"
-            id="player1MoveImg"
-            alt="Player 1 Move selected"
-          />
+        <!-- start Game Result Msg -->
+        <div class="row text-center my-2 " id="playerMsg">
+          <!-- display for one player only-->
+          <h1 id="firstMoveTxt">
+            WHAT WILL BE YOUR FIRST MOVE?
+          </h1>
+
+          <!--display for 2 player mode-->
+          <div  id="player1ChooseMoveTxt" >
+            <h1  class="teal slideRight"> PLAYER 1 </h1>
+            <h1>CHOOSE YOUR MOVE</h1>
+          </div>
+          <div class="inactive"   id="player2ChooseMoveTxt">
+            <h1 class="green slideLeft"> PLAYER 2 </h1>
+            <h1>CHOOSE YOUR MOVE</h1>
+          </div>
+
+
+          <h2  class="bounceIn" id="roundResultTxt">ROUND WINNER RESULT</h2>
+          <h1 class="bounceIn" id="gameResultTxt">OVERALL WINNER RESULT</h1>
+          <h2 id="nextMoveOrGameOverTxt">CHOOSE YOUR NEXT MOVE</h2>
         </div>
-        <div class="col">
-          <img src="./assets/VSwhite.png" id="vsImg" alt="VS image" />
+        <!--end game result msg -->
+
+        <!-- p1 moves section-->
+        <div class="row justify-content-center " id="p1MovesBtnSection">
+          <div class="d-flex flex-wrap justify-content-between">
+            <button type="button" class="btn " id="p1RockBtn">
+              <img  class="rounded-4 border border-5 border-white" src="./assets/rock.png" alt="Rock Button" />
+            </button>
+            <button type="button" class="btn" id="p1PaperBtn">
+              <img   class="rounded-4 border border-5 border-white"  src="./assets/paper.png" alt="Paper Button" />
+            </button>
+            <button type="button" class="btn" id="p1ScissorsBtn">
+              <img  class="rounded-4 border border-5 border-white"  src="./assets/scissors.png" alt="Scissors Button" />
+            </button>
+            <button type="button" class="btn" id="p1LizardBtn">
+              <img   class="rounded-4 border border-5 border-white"   src="./assets/lizard.png" alt="Lizard Button" />
+            </button>
+            <button type="button" class="btn" id="p1SpockBtn">
+              <img class="rounded-4 border border-5 border-white"  src="./assets/spock.png" alt="Spock Button" />
+            </button>
+          </div>
         </div>
-        <div class="col">
-          <img
-            src="./assets/rock.png"
-            id="player2MoveImg"
-            alt="Player 1 Move selected"
-          />
+        <!-- end player 1 moves btn section-->
+
+        <!-- p2 moves section-->
+        <div class="row justify-content-center inactive" id="p2MovesBtnSection">
+          <div class="d-flex flex-wrap justify-content-between">
+            <button type="button" class="btn " id="p2RockBtn">
+              <img  class="rounded-4 border border-5 border-white" src="./assets/rock.png" alt="Rock Button" />
+            </button>
+            <button type="button" class="btn" id="p2PaperBtn">
+              <img   class="rounded-4 border border-5 border-white"  src="./assets/paper.png" alt="Paper Button" />
+            </button>
+            <button type="button" class="btn" id="p2ScissorsBtn">
+              <img  class="rounded-4 border border-5 border-white"  src="./assets/scissors.png" alt="Scissors Button" />
+            </button>
+            <button type="button" class="btn" id="p2LizardBtn">
+              <img   class="rounded-4 border border-5 border-white"   src="./assets/lizard.png" alt="Lizard Button" />
+            </button>
+            <button type="button" class="btn" id="p2SpockBtn">
+              <img class="rounded-4 border border-5 border-white"  src="./assets/spock.png" alt="Spock Button" />
+            </button>
+          </div>
         </div>
+        <!-- end player 2 moves btn section-->
+        <div class="row text-center"> 
+           <button type="button" class="btn border-0  inactive" id="playAgainBtn">
+          <img src="./assets/PlayAgain.png" alt="Play Again Button" />
+        </button>
+        <button type="button" class="btn border-0  inactive" id="nextRoundBtn">
+          <img src="./assets/NextButton.png" alt="Next Round Button" />
+        </button>
       </div>
-      <!--end of moves selected section-->
-      <!-- start Game Result Msg -->
-      <div class="row text-center" id="playerMsg">
-        <h1 class="" id="firstMoveTxt">
-          WHAT WILL BE YOUR FIRST MOVE?
-        </h1>
-        <h2  id="roundResultTxt">ROUND WINNER RESULT</h2>
-        <h1 id="gameResultTxt">OVERALL WINNER RESULT</h1>
-        <h2 id="nextMoveOrGameOverTxt">CHOOSE YOUR NEXT MOVE</h2>
       </div>
-      <!--end game result msg -->
-      <div class="row justify-content-center" id="movesBtnSection">
-        <div class="d-flex flex-wrap justify-content-between">
-          <button type="button" class="btn" id="p1RockBtn">
-            <img src="./assets/rock.png" alt="Rock Button" />
-          </button>
-          <button type="button" class="btn" id="p1PaperBtn">
-            <img src="./assets/paper.png" alt="Paper Button" />
-          </button>
-          <button type="button" class="btn" id="p1ScissorsBtn">
-            <img src="./assets/scissors.png" alt="Scissors Button" />
-          </button>
-          <button type="button" class="btn" id="p1LizardBtn">
-            <img src="./assets/lizard.png" alt="Lizard Button" />
-          </button>
-          <button type="button" class="btn" id="p1SpockBtn">
-            <img src="./assets/spock.png" alt="Spock Button" />
-          </button>
-        </div>
-      </div>
-      <div class="align-items-center">  <button type="button" class="btn  inactive" id="playAgainBtn">
-        <img src="./assets/PlayAgain.png" alt="Play Again Button" />
-      </button></div>
-    </div>
-    <!--end player 1 container-->
-    <!--  result container-->
-    <div class="container" id="resultContainer">
-      <div class="row"></div>
-    </div>
-    <!--end game over container-->
+    <!--end one player container-->
+
+    
+    
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
