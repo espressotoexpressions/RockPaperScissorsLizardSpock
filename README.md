@@ -7,7 +7,7 @@
 // Brief Description of what I did:
 
 Create a working game application for RPSLS with the following requirements:
-1v1 and 1vCPU
+1v1 and 1vCPU (CPU Response is connecting to an API that generates a random move)
 Different modes: 1 win / 3 out of 5 / 4 out of 7
 have a way to show the rules of the game
 
